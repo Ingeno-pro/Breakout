@@ -31,7 +31,7 @@ int ballColWithBrick(int ballx, int bally, int map[MAP_W][MAP_H]){
 	//if(map[(int)(ballx/10+1)][(int)(bally/2 -1)] > 0){return 1;}else{return 0;}//système imparfait
 		for(i = 0; i < MAP_W;i++){
 			for(j = 0;j < MAP_H;j++){
-				if(map[i][j] > 0 && (ballx >= i * BRICK_W || ballx + BALL_W >= i * BRICK_W) && ballx <= i * BRICK_W + BRICK_W && bally <= j*BRICK_H + BRICK_H + 1){
+				if(map[i][j] > 0 && (ballx >= i * BRICK_W || ballx + BALL_W >= i * BRICK_W) && ballx <= i * BRICK_W + BRICK_W && bally <= j*BRICK_H + BRICK_H + 1 && bally + BALL_W <= j*BRICK_H + 1){ // à refaire
 					map[i][j]--;
 					return 1;
 				}else{
