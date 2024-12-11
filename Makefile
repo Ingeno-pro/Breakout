@@ -1,5 +1,5 @@
 breakout : main.o event.o levelmanager.o gui.o
-	gcc -o breakout.exe main.o event.o levelmanager.o gui.o `pkg-config --libs caca` 
+	gcc -o breakout main.o event.o levelmanager.o gui.o `pkg-config --libs caca` 
 
 main.o : src/main.c
 	gcc -o main.o -c src/main.c `pkg-config --libs caca` 
